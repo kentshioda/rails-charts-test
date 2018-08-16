@@ -19,7 +19,7 @@ default: &default
 
 development:
   <<: *default
-  database: homework_development
+  database: rails-charts-test_development
   socket: /var/run/mysqld/mysqld.sock
 
 
@@ -28,7 +28,7 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: homework_test
+  database: rails-charts-test_test
   socket: /var/run/mysqld/mysqld.sock
 
 
@@ -53,6 +53,6 @@ test:
 #
 production:
   <<: *default
-  database: homework_production
-  username: homework
+  database: rails-charts-test_production
+  username: rails-charts-test
   password: <%= ENV['HOMEWORK_DATABASE_PASSWORD'] %>

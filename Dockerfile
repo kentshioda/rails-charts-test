@@ -7,15 +7,15 @@ RUN apt-get install -y libpq-dev
 RUN apt-get install -y nodejs
 
 # ワーキングディレクトリの設定
-RUN mkdir /homework
-WORKDIR /homework
+RUN mkdir /rails-charts-test
+WORKDIR /rails-charts-test
 
 # gemfileを追加する
-ADD Gemfile /homework/Gemfile
-ADD Gemfile.lock /homework/Gemfile.lock
+ADD Gemfile /rails-charts-test/Gemfile
+ADD Gemfile.lock /rails-charts-test/Gemfile.lock
 
 # gemfileのinstall
 RUN bundle install
-ADD . /homework
+ADD . /rails-charts-test
 
 ENV LANG C.UTF-8
