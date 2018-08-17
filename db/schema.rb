@@ -10,12 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180814115516) do
+ActiveRecord::Schema.define(version: 20180817062616) do
 
   create_table "real_estates", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "place", null: false
     t.integer "price", null: false
     t.string "year", null: false
+    t.integer "square_meter", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

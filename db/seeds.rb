@@ -11,8 +11,10 @@ require 'csv'
 
 CSV.foreach('db/ppy.txt') do |info|
   RealEstate.create(
+
     place: info[0],
     price: info[1],
-    year: info[2]
+    year: info[2],
+    square_meter: info[3]
   )
 end

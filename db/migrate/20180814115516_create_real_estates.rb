@@ -4,6 +4,7 @@ class CreateRealEstates < ActiveRecord::Migration[5.1]
       t.string :place, null: false
       t.integer :price, null: false
       t.string :year, null: false
+      t.integer :square_meter, null: false
 
       t.timestamps
     end
