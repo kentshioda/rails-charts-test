@@ -1,15 +1,15 @@
 class ChartsController < ApplicationController
   def index
-    places = Array.new()
+    places = []
     places2count = RealEstate.all.group(:place).count
-    places2count.each_key do |key|
-      places << key
+    places2count.each_key do |place|
+      places << place
     end
     @place2year_price = Hash.new { |h, k| h[k] = [] }
-    places.each do |value|
-      @year2price = RealEstate.where(place: value).group(:year).average(:price)
-      @year2price.each_pair do |k, v|
-        @place2year_price[value] << [k, v]
+    places.each do |place|
+      @year2price = RealEstate.where(place: place).group(:year).average(:price)
+      @year2price.each_pair do |year, price|
+        @place2year_price[place] << [year, price]
       end
     end
   end

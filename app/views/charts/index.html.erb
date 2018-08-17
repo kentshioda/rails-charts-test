@@ -2,17 +2,17 @@
   <!-- Line Chart - Single Series -->
   <div class="col-xs-6">
     <h3>Charts</h3>
-    <% @place2year_price.each do |key, value| %>
-      <%= key %><br>
-      <%= line_chart value.each do |k, v|
-        {:name => value, :data => [k, v]}
+    <% @place2year_price.each do |place, year_price| %>
+      <%= place %><br>
+      <%= line_chart year_price.each do |year, price|
+        {:name => place, :data => [year, price]}
       end %>
     <% end %>
 
 
     <!-- debug -->
-    <% line_chart @place2year_price.each do |key, value| %>
-      <%{:name => value[0], :data => value[1]} %><br>
+    <% line_chart @place2year_price.each do |place, year_price| %>
+      <%{:name => year_price[0], :data => year_price[1]} %><br>
     <% end %>
   </div>
 </div>
