@@ -1,18 +1,29 @@
 <div class="row">
   <!-- Line Chart - Single Series -->
+  <% @places.each do |place| %>
+    <%= place %><br>
+    <%= line_chart  @place_year_price_per_sm[place] %><br>
+    <% end %>
+  <!--
   <div class="col-xs-6">
     <h3>Charts</h3>
-    <% @place2year_price.each do |place, year_price| %>
+    <% @places.each do |place| %>
       <%= place %><br>
-      <%= line_chart year_price.each do |year, price|
-        {:name => place, :data => [year, price]}
-      end %>
+      <%= @place_year_price_per_sm[place] %><br>
+      <%= line_chart @place_year_price_per_sm[place].map { |year, price|
+        {:name => place, :data => { year => price } }
+      }
+      %>
     <% end %>
+    -->
+    <%= pie_chart({"Football" => 10, "Basketball" => 5}) %>
+    <%= pie_chart [["Football", 10], ["Basketball", 5]] %>
 
+    <!-- for debug -->
 
-    <!-- debug -->
-    <% line_chart @place2year_price.each do |place, year_price| %>
-      <%{:name => year_price[0], :data => year_price[1]} %><br>
+    <% @place_year_price_per_sm.each do |place, year_price| %>
+    <% place %><br>
+    <% year_price %><br>
     <% end %>
   </div>
 </div>
