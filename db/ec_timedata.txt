@@ -1,0 +1,16 @@
+amazon,Jan 06,1027
+amazon,Jan 07,1037
+amazon,Jan 08,1073
+amazon,Jan 09,1120
+rakuten,Jan 06,475
+rakuten,Jan 07,446
+rakuten,Jan 08,480
+rakuten,Jan 09,354
+yahoo,Jan 06,1057
+yahoo,Jan 07,840
+yahoo,Jan 08,896
+yahoo,Jan 09,717
+zozo,Jan 06,33
+zozo,Jan 07,26
+zozo,Jan 08,35
+zozo,Jan 09,30
