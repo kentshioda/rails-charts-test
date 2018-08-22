@@ -1,0 +1,2 @@
+class RecordNumber < ApplicationRecord
+end
