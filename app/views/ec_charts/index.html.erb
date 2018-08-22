@@ -1,0 +1,8 @@
+<div class="row">
+  <!-- Line Chart - Single Series -->
+  <%= line_chart @company_count_by_day.map{ |company, date_count|{
+    name: company, data: date_count
+    }
+  }
+  %>
+</div>
