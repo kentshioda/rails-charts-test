@@ -1,29 +1,6 @@
-# README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
 # what?
-東京都の不動産取引価格推移  
-期間:　平成20年第1四半期~平成29年第4四半期  
-地区:　港区
+
+Amazon，楽天，ヤフー，ゾゾタウンを含むtweet数推移チャート
+
+# data
+2017/01/06~2017/01/09 間に呟かれたtweet: 2,860,669件
